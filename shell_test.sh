@@ -15,7 +15,8 @@ test_start(){
     then
         . $source_file
     else
-        color_echo "このファイルの親ディレクトリに、このファイル名からtest_を除いた名前のファイルがある必要があります。"
+        color_echo red "source file $source_file not found"
+        color_echo red "このファイルの親ディレクトリに、このファイル名からtest_を除いた名前のファイルがある必要があります。"
         exit 1
     fi
     test_count=0
